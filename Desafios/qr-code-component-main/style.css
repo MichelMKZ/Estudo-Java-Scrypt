@@ -1,0 +1,39 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Outfil', sans-serif;
+    background-color: hsl(212, 45%, 89%);
+}
+.container{
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto 20px;
+    padding: 20px 20px 35px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.container img{
+    width: 100%;
+    border-radius: 15px;
+}
+.container h2{
+    font-weight: 700;
+    padding: 1rem;
+}
+.container p{
+    font-weight: 400;
+    margin: 0 22px;
+}
+.attribution{
+    font: 15px;
+    text-align: center;
+}

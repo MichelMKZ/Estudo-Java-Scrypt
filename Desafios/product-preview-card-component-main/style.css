@@ -1,0 +1,43 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans&family=Poppins:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Open+Sans&family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat' , sans-serif;
+    font-size: 14px;
+    display: flex;
+}
+h1, h2{
+    font-family: 'Fraunces' , sans-serif;
+}
+button, .valor, .valor2{
+    font-family: inherit;
+}
+
+.container{
+    max-width: 1420px;
+    
+}
+
+img{
+    max-width: 100%;
+}
+.left{
+    background-image: url(images/image-product-desktop.jpg);
+    width: 50%;
+    
+}
+
+.right{
+    width: 50%;;
+    background-color: hsl(0, 63%, 35%);
+    display: flex;
+}
