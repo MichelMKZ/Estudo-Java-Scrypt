@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <p>My balance</p>
+        <h1>$921.48</h1>
+      </div>
+      
+      <div class="logo">
+        <svg width="72" height="48" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#382314" cx="48" cy="24" r="24"/><circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23"/></g></svg>
+      </div>
+      
+    </div>
+
+    <div class="main">
+      <div class="grafico">
+        <h2></h2>
+        <div> 
+          <canvas id="myChart" style="width: 400; height: 400;" >
+          </canvas>
+        </div>
+      
+      </div>
+      <div class="valorTempo">
+          <div class="valor">
+            <p>Total this month</p>
+            <h1>$478.33</h1>
+          </div>
+          <div class="tempo">
+            <h3>+2.4%</h3>
+            <p>from last month</p>
+          </div>
+        </div>
+    </div>
+    <script>
+      const ctx = document.getElementById('myChart');
+      const myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
+              datasets: [{
+                  label: '# of Votes',
+                  data: [4, 8, 10, 7, 5, 9, 6],
+                  backgroundColor: [
+                      'hsl(10, 79%, 65%)',
+                      'hsl(10, 79%, 65%)',
+                      'hsl(186, 34%, 60%)',
+                      'hsl(10, 79%, 65%)',
+                      'hsl(10, 79%, 65%)',
+                      'hsl(10, 79%, 65%)',
+                      'hsl(10, 79%, 65%)'
+                  ],
+              }]
+          },
+      
+      });
+    </script>
+  </div>
+
+</body>
+</html>

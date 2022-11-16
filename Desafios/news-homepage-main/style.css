@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    
+}
+body{
+    max-width: 1440px;
+    margin: auto;
+    padding-bottom: 90px;
+}
+
+.header nav {
+    word-spacing: 35px;
+}
+
+.principalArtigo img{
+    max-height: 300px;
+    max-width: 730px;
+}
+
+.principalArtigo article{
+    max-width: 730px;
+    display: flex;
+}
+
+.principalArtigo button{
+    background-color: hsl(5, 85%, 63%);
+    padding: 0;
+    width: 100px;
+}
+/*
+.principalArtigo article{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  
+}
+*/
+.principalArtigo article{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.principalArtigo h1{
+    font-size: 30px;
+    font-weight: 800;
+    max-width: 330px;
+    display: flex;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+p{
+    line-height: 1.8;
+    color: hsl(236, 13%, 42%);
+}
+header a{
+    text-decoration: none;
+    color: hsl(236, 13%, 42%);
+}
+

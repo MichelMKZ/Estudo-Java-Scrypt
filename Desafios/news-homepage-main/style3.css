@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+body{
+    width: 100%;
+    min-width: 100vh;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+img{
+    max-width: 100%;
+}
+ul{
+    list-style: none;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+.menu{/*desativa o menu da tela*/
+    display: none;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 2.3rem;
+}
+.nav-links li{
+    color: hsl(236, 13%, 42%);
+    cursor: pointer;
+}
+.nav-links li:hover{
+    color: hsl(5, 85%, 63%);
+}
+
+main{
+
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    max-height: 750px;
+}
+.postPrincipal{
+    grid-column: 2 span;
+    grid-row: 1 span;
+}
+
+.blogPrincipal h1{
+    font-size: 3rem;
+    color: hsl(240, 100%, 5%);
+    width: 300px;
+    font-weight: 800;
+}
+.blogPrincipal .blogTexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blogPrincipal{
+    display: flex;
+    margin-top: 1rem;
+}
+.blogPrincipal h1{
+    width: 300px;
+    color: hsl(240, 100%, 5%);
+    font-size: 40px;
+    font-weight: 800;
+}
+.blogTexto p{
+    width: 300px;
+    color: hsl(236, 13%, 42%);
+    line-height: 23px;
+}
+
+/*
+.blogTexto{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+*/
+.blogTexto button{
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(36, 100%, 99%);
+    width: 200px;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+.blogTexto button:hover{
+    background-color: hsl(240, 100%, 5%);
+}
+
+.new{
+    grid-column: 1 span;
+    grid-row: 1 span;
+    background-color: hsl(240, 100%, 5%);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    color: hsl(36, 100%, 99%);
+}
+/*/
+.newBlog{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}*/
+.new h2{
+    color: hsl(35, 77%, 62%);
+    font-size: 30px;
+}
+.newBlog{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 25px;
+}
+.newTexto{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.newTexto h3{
+    font-size: 18px;
+    font-weight: 700;
+}
+.newTexto p{
+    color: hsl(233, 8%, 79%);
+}
+.newTexto::after{
+    content: "";
+    margin-top: 25px;
+    display: flex;
+    width: 100%;
+    height: 1px; /*colocar linha branca*/
+    background-color: hsl(233, 8%, 79%);
+}
+.newTexto:last-child::after{
+    display: none; /*remove o ultimo rico branco do quadro azul*/
+}
+
+.newTexto h3:hover{
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+.cards{
+    display: flex;
+    grid-column: 3 span;
+    grid-row: 1 span;
+    gap: 40px /*este iten coloca espacamento entre o grid com almento vertical e horizonando iguais */
+}
+.cardTop{
+    display: flex;
+    align-items: center;
+    height: fit-content;/*esta funcao nao deixa passar o tamanho dos itens na div*/
+}
+.cardTop img{
+    width: 100px;
+}
+.cardInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 15px;
+    height: 125px;
+    
+}
+.cardInfo h2{
+    color: hsl(233, 8%, 79%);
+    font-size: 30px;
+}
+.cardInfo h3{
+    color: hsl(240, 100%, 5%);
+}
+.cardInfo p{
+    color: hsl(236, 13%, 42%);
+}
+
+@media screen and (max-width:800px){
+    
+    body{
+        align-items: flex-start;
+    }
+    nav{
+        padding-inline: 1rem;
+    }
+    .nav-links{ 
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+    main{
+        padding-inline: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .blogPrincipal{
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+    }
+    .blogTexto{
+        gap: 2rem;
+        width: 100%;
+    }
+    .blogPrincipal h1{
+        width: 100%;
+    }
+    .blogPrincipal p{
+        width: 100%; 
+    }
+}
